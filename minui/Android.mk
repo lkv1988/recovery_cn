@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := resources.c
+LOCAL_SRC_FILES := resources.c chinese.c
 
 ifneq ($(BOARD_CUSTOM_RECOVERY_EVENTS),)
   LOCAL_SRC_FILES += $(BOARD_CUSTOM_RECOVERY_EVENTS)
@@ -12,7 +12,7 @@ endif
 ifneq ($(BOARD_CUSTOM_GRAPHICS),)
   LOCAL_SRC_FILES += $(BOARD_CUSTOM_GRAPHICS)
 else
-  LOCAL_SRC_FILES += graphics_cn.c
+  LOCAL_SRC_FILES += graphics.c
 endif
 
 LOCAL_C_INCLUDES +=\
